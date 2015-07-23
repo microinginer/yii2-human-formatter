@@ -2,7 +2,7 @@
     "name": "microinginer/yii2-human-datetime-formatter",
     "keywords": ["yii2", "formatter", "datetime", "human"],
     "homepage": "https://github.com/microinginer/yii2-human-datetime-formatter",
-    "type": "yii2-extension",
+    "type": "yii2-extensions",
     "require": {
         "yiisoft/yii2": "*"
     },
@@ -17,5 +17,10 @@
             "email": "uzep@mail.ru"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "microinginer\\humanDatetime\\": ""
+        }
+    }
 }

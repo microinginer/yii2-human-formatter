@@ -1,12 +1,11 @@
 <?php
 
-namespace microinginer\humandatetime;
+namespace microinginer\humanDatetime;
 
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
-use yii\i18n\Formatter;
 
 /**
  * Class HumanDatetime
@@ -14,7 +13,7 @@ use yii\i18n\Formatter;
  * @author Ruslan Madatov <ruslanmadatov@yandex.ru>
  * @author Mihail Gerasimov <uzep@mail.ru>
  */
-class HumanDatetime extends Formatter
+class Formatter extends yii\i18n\Formatter
 {
     /**
      * @var array
