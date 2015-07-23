@@ -1,0 +1,21 @@
+{
+    "name": "microinginer/yii2-human-datetime-formatter",
+    "keywords": ["yii2", "formatter", "datetime", "human"],
+    "homepage": "https://github.com/microinginer/yii2-human-datetime-formatter",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "inginer",
+            "email": "inginer.r@gmail.com"
+        },
+        {
+            "name": "gir3li",
+            "email": "uzep@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev"
+}
