@@ -1,6 +1,6 @@
 <?php
 
-namespace microinginer\humanDatetime;
+namespace microinginer\humanFormatter;
 
 
 use Yii;
@@ -14,7 +14,7 @@ use yii\i18n\Formatter;
  * @author Ruslan Madatov <ruslanmadatov@yandex.ru>
  * @author Mihail Gerasimov <uzep@mail.ru>
  */
-class HumanDatetime extends Formatter
+class HumanFormatter extends Formatter
 {
     /**
      * @var array

@@ -1,1 +1,1 @@
-# yii2-human-datetime-formatter
+# yii2-human-formatter
