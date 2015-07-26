@@ -4,7 +4,7 @@ yii2-human-formatter
 This formatter for yii2 which extend basic formatter. Override
 datetime and add method of formatting phones (only Russia's number)
 
-[russian readme](https://github.com/microinginer/yii2-human-formatter/blob/master/README.md)
+[russian readme](https://github.com/microinginer/yii2-human-formatter/blob/master/README-RU.md)
 
 Example
 ---------------
