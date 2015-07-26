@@ -13,6 +13,11 @@ yii2-human-formatter
 echo Yii::$app->formatter->asDatetime(time()); // сегодня в 23:55
 echo Yii::$app->formatter->asDatetime(strtotime('- 1 day')); // вчера в 23:55
 echo Yii::$app->formatter->asDatetime('2014-08-23 23:55:12'); //  23 августа 2014 в 23:55
+
+echo Yii::$app->formatter->asPhone('89254552773'); //  +7 (925) 455-27-73
+echo Yii::$app->formatter->asPhone('9254552773'); //  +7 (925) 455-27-73
+echo Yii::$app->formatter->asPhone('925 455 27 73'); //  +7 (925) 455-27-73
+echo Yii::$app->formatter->asPhone('(925) 455 27-73'); //  +7 (925) 455-27-73
 ```
 
 Задание формата аттрибуту

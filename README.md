@@ -13,6 +13,11 @@ Example
 echo Yii::$app->formatter->asDatetime(time()); // 0 seconds ago
 echo Yii::$app->formatter->asDatetime(strtotime('- 1 day')); // Yesterday at 11:55 pm
 echo Yii::$app->formatter->asDatetime('2014-08-23 23:55:12'); //  August 23 at 11:55 pm
+
+echo Yii::$app->formatter->asPhone('89254552773'); //  +7 (925) 455-27-73
+echo Yii::$app->formatter->asPhone('9254552773'); //  +7 (925) 455-27-73
+echo Yii::$app->formatter->asPhone('925 455 27 73'); //  +7 (925) 455-27-73
+echo Yii::$app->formatter->asPhone('(925) 455 27-73'); //  +7 (925) 455-27-73
 ```
 
 ```php
