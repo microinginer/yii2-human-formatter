@@ -37,18 +37,6 @@ class HumanFormatter extends Formatter
     /**
      * @var array
      */
-    private static $periods = [
-        'second',
-        'minute',
-        'hour',
-        'day',
-        'week',
-        'month',
-        'years',
-    ];
-    /**
-     * @var array
-     */
     private static $lengths = [
         '60',
         '60',
@@ -161,10 +149,11 @@ class HumanFormatter extends Formatter
         }
 
         $difference = round($difference);
+        $periods = ['second', 'minute', 'hour', 'day', 'week', 'month', 'years'];
         if ($difference != 1) {
-            self::$periods[ $j ] .= 's';
+            $periods[ $j ] .= 's';
         }
-        $result = $difference . ' ' . self::$periods[ $j ] . ' ' . $ending;
+        $result = $difference . ' ' . $periods[ $j ] . ' ' . $ending;
 
         switch ($format) {
             case 'human':
@@ -196,7 +185,7 @@ class HumanFormatter extends Formatter
         }
     }
 
-    public function asPhone ($phone, $country=null, $prefix=true)
+    public function asPhone ($phone, $country = null, $prefix = true)
     {
         switch ((is_null($country) ? $this->locale : $country)) {
             case 'ru': {
@@ -212,10 +201,8 @@ class HumanFormatter extends Formatter
     private function asPhoneRu ($phone, $prefix)
     {
         $phone_clear = $this->asPhoneClear($phone);
-        switch (intval(strlen($phone_clear)))
-        {
-            case 11:
-            {
+        switch (intval(strlen($phone_clear))) {
+            case 11: {
                 $phone = '' . $phone_clear;
                 break;
             }
@@ -228,16 +215,17 @@ class HumanFormatter extends Formatter
             }
         }
         $n = strval($phone);
-        return ($prefix ? '+7' : '') . ' ('.$n[1].$n[2].$n[3].') '.$n[4].$n[5].$n[6].'-'.$n[7].$n[8].'-'.$n[9].$n[10];
+
+        return ($prefix ? '+7' : '') . ' (' . $n[1] . $n[2] . $n[3] . ') ' . $n[4] . $n[5] . $n[6] . '-' . $n[7] . $n[8] . '-' . $n[9] . $n[10];
     }
 
-    public function asPhoneClear($phone_raw, $prefix=false)
+    public function asPhoneClear ($phone_raw, $prefix = false)
     {
         $phone = preg_replace('/[^0-9]/', '', $phone_raw);
-        if (!$prefix && (strlen($phone) > 10))
-        {
-            $phone = substr($phone,1);
+        if (!$prefix && (strlen($phone) > 10)) {
+            $phone = substr($phone, 1);
         }
+
         return $phone;
     }
 }
